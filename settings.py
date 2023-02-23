@@ -1,1 +1,1 @@
-WORDS_ENDPOINT = "https://jsonkeeper.com/b/47NN"
+WORDS_ENDPOINT = 'https://www.jsonkeeper.com/b/47NN'
