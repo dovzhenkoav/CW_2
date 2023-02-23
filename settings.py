@@ -1,0 +1,1 @@
+WORDS_ENDPOINT = "https://jsonkeeper.com/b/47NN"
