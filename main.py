@@ -1,7 +1,5 @@
-import random
+from utils import load_random_word
 
-from utils import get_words
-from basic_word import BasicWord
 from player import Player
 
 
@@ -11,8 +9,8 @@ def main():
         if username:
             break
 
-    words_bank: dict = random.choice(get_words())
-    basic_word: BasicWord = BasicWord(words_bank['word'], words_bank['subwords'])
+    quiz_word = load_random_word()
+
 
 
 if __name__ == '__main__':
