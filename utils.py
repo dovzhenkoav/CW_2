@@ -3,7 +3,12 @@ import random
 
 from settings import WORDS_ENDPOINT
 from basic_word import BasicWord
+from player import Player
 
+
+def show_statistics(user: Player):
+    """Отображает статистику отгаданных слов"""
+    print(f'Игра завершена, вы угадали {user.get_used_words_len()} слов!')
 
 def load_random_word() -> BasicWord:
     """Получаем список слов с внешнего ресурса, берём случайное слово и запихиваем его в экземпляр BasicWord"""

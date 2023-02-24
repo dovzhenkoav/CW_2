@@ -1,4 +1,4 @@
-from utils import load_random_word
+from utils import load_random_word, show_statistics
 from basic_word import BasicWord
 from player import Player
 from settings import SAFEWORD
@@ -38,6 +38,7 @@ def main():
         else:
             raise Exception('Unknown exception')
 
+    show_statistics(user)
 
 
 if __name__ == '__main__':
