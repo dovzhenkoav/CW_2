@@ -6,10 +6,10 @@ class Player:
     def get_used_words_len(self) -> int:
         return len(self.used_words)
 
-    def append_used_word(self, word):
+    def append_used_word(self, word: str):
         self.used_words.append(word)
 
-    def check_used_word(self, word) -> bool:
+    def check_used_word(self, word: str) -> bool:
         return word in self.used_words
 
     def __repr__(self):
