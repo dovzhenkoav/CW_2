@@ -15,7 +15,7 @@ def quiz_brain(quiz_word, user):
 
         user_input = input('').lower().strip()
 
-        if user_input == SAFEWORD:
+        if user_input in SAFEWORD:
             break
         elif len(user_input) < 3:
             print('слишком короткое слово')
