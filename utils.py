@@ -36,6 +36,7 @@ def show_statistics(user: Player):
 
 
 def get_user() -> Player:
+    """Получаем имя пользователя и создаём с ним экземпляр класса Player"""
     while True:
         username = input('Введите имя игрока: ')
         if username:
