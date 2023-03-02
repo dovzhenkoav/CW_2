@@ -1,7 +1,7 @@
 from utils import load_random_word, show_statistics, get_user, quiz_brain
 from basic_word import BasicWord
 from player import Player
-from settings import SAFEWORD
+from settings import SAFEWORDS
 
 
 def main():
@@ -10,7 +10,7 @@ def main():
 
     print(f'Составьте {quiz_word.len_subwords()} слов из слова {quiz_word.basic_word}\n'
           f'Слова должны быть не короче 3 букв\n'
-          f'Чтобы закончитть игру, угадайте все слова или напишите "{SAFEWORD[0]}"\n'
+          f'Чтобы закончитть игру, угадайте все слова или напишите "{SAFEWORDS[0]}"\n'
           f'Поехали, ваше первое слово?')
 
     quiz_brain(quiz_word, user)

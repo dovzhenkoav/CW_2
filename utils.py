@@ -1,27 +1,24 @@
 import requests
 import random
 
-from settings import WORDS_ENDPOINT
+from settings import WORDS_ENDPOINT, SAFEWORDS
 from basic_word import BasicWord
 from player import Player
-from settings import SAFEWORD
 
 
 def quiz_brain(quiz_word, user):
     """Обработчик ответов"""
-    while True:
-        if quiz_word.len_subwords() == len(user.used_words):
-            break
+    while quiz_word.len_subwords() > len(user.used_words):
 
-        user_input = input('').lower().strip()
+        user_input = input().lower().strip()
 
-        if user_input in SAFEWORD:
+        if user_input in SAFEWORDS:
             break
         elif len(user_input) < 3:
             print('слишком короткое слово')
         elif user.check_used_word(user_input):
             print('уже использовано')
-        elif not quiz_word.is_word_in_subwords(user_input):
+        elif quiz_word.is_word_in_subwords(user_input) is False:
             print('неверно')
         elif user_input in quiz_word.subwords:
             print('верно')
